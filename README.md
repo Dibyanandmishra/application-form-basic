@@ -1,6 +1,6 @@
 # Job Application Form (Basic)
 
-A simple and responsive Job Application Form built using **HTML and CSS**.  
+A simple and responsive Job Application Form built using **HTML, CSS and JS**.  
 This project is designed to collect applicant details like personal, educational, and professional information in a structured way.  
 It is lightweight, beginner-friendly, and easy to customize for learning or small-scale projects.
 
@@ -17,4 +17,4 @@ It is lightweight, beginner-friendly, and easy to customize for learning or smal
 ## 🛠️ Tech Stack
 - **HTML5** – Form structure  
 - **CSS3** – Styling and layout  
-
+- **JS** - Handle error and submission
