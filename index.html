@@ -1,73 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="body_section">
-        <h1>Job Application <span class="web_in_h1">(Web)</span></h1>
-        <form class="form_section"> 
-            <div class="form_control">
+    <div class="container">
+        <div class="body_section">
+            <h1>Job Application <span class="web_in_h1">(Web)</span></h1>
+            <form class="form_section" id="jobForm">
+                <div class="form_control">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" placeholder="Enter First Name" name="fname">
+                    <small class="error"></small>
+                </div>
 
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" placeholder="Enter First Name" name="fname">
-                
-            </div>
+                <div class="form_control">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
-            </div>
+                <div class="form_control">
+                    <label for="Email">Email Id:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Enter Email Id">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="Email">Email Id:</label>
-                <input type="email" id="Email" name="Email" placeholder="Enter Email Id">
-            </div>
+                <div class="form_control">
+                    <label for="JobRole">Job Role:</label>
+                    <select name="JobRole" id="JobRole">
+                        <option value="">--Select a Role--</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="FullStack">Full Stack</option>
+                        <option value="NonCoding">Non Coding</option>
+                    </select>
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
+                <div class="textarea_control">
+                    <label for="Address">Address:</label>
+                    <textarea name="Address" id="Address" placeholder="Enter Your Address" rows="4"></textarea>
+                    <small class="error"></small>
+                </div>
 
-                <label for="JobRole">Job Role:</label>
-                <select name="JobRole" id="JobRole">
-                    <option value="Frontend">Frontend</option>
-                                <option value="Backend">Backend</option>
-                                <option value="FullStack">Full Stack</option>
-                                <option value="NonCoding">Non Coding</option>
-                            </select>
-            </div>
-            
-            <div class="textarea_control">
-                <label for="Address">Address:</label>
-                <textarea name="Address" id="Address" placeholder="Enter Your Address" rows="4" cols="50"></textarea><br>    
-            </div>
+                <div class="form_control">
+                    <label for="City">City:</label>
+                    <input type="text" id="City" name="City" placeholder="Enter City">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="City">City:</label>
-                <input type="text" id="City" name="City" placeholder="Enter City">    
-            </div>
+                <div class="form_control">
+                    <label for="PinCode">Pin Code:</label>
+                    <input type="number" id="PinCode" name="PinCode" placeholder="Enter Pin Code">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="PinCode">Pin Code:</label>
-                <input type="number" id="PinCode" name="PinCode" placeholder="Enter Pin Code"><br>    
-            </div>
+                <div class="form_control">
+                    <label for="date">Start Date:</label>
+                    <input value="2025-04-20" type="date" id="date" name="date">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="date">Start Date:</label>
-                <input value="2025-04-20" type="date" id="date" name="date">
-            </div>
+                <div class="form_control">
+                    <label for="cv">CV Upload:</label>
+                    <input type="file" id="cv" name="cv">
+                    <small class="error"></small>
+                </div>
 
-            <div class="form_control">
-                <label for="cv">CV Upload:</label>
-                <input type="file" id="cv" name="cv">
+            </form>
+            <div class="button_container">
+                <!-- html5 feature: form="jobForm" help the button to submit the form even the button is outside the <form> -->
+                <button type="submit" id="button" form="jobForm">Apply Now</button>
             </div>
-        </form>
-        <div class="button_container">
-            <button type="submit" id="button">Apply Now</button>
         </div>
     </div>
-</div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
